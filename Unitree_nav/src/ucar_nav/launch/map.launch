@@ -1,0 +1,9 @@
+<launch>
+
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
+    <!-- <remap from="/odometry/filtered" to="/odom"/> -->
+    <rosparam command="load" file="$(find ucar_nav)/config/ekfse/ekf.yaml" />
+  </node>
+
+
+</launch>

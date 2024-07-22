@@ -1,0 +1,9 @@
+Header header
+uint16 box_x
+uint16 box_y
+uint16 box_w
+uint16 box_h
+---
+float32 pla_x
+float32 pla_y
+float32 road

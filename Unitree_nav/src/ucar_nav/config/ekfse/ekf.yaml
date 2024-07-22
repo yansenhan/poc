@@ -1,0 +1,220 @@
+# 滤波器产生状态估计值的真实频率（单位为Hz）注意：滤波器只有从输入之一接收到至少一条消息后才会开始计算。
+frequency: 10
+
+
+silent_tf_failure: false
+
+
+#实值周期（以秒为单位），超过此值后我们认为任何传感器都已超时。在这种情况下，我们将对EKF进行预测周期，而无需对其进行校正。
+# 可以将此参数视为滤波器将生成新输出的最小频率的倒数。
+sensor_timeout: 0.5
+
+
+# 如果您的机器人在平面环境中运行，并且可以忽略地面的细微变化（如IMU所报告），则将其设置为true。它将所有3D变量（Z，侧倾，俯仰以及它们各自的速度和加速度）融合成值0。这样可以确保这些值的协方差不会爆炸，同时确保您的机器人的状态估算值仍固定在X-Y平面上。
+two_d_mode: true
+
+# robot_localization包使用tf2的lookupTransform方法请求转换。此参数指定如果转换尚不可用我们要等待多长时间。
+# 如果未设置，则默认为0。值0表示我们只是获取了最新的可用转换（请参阅tf2实现），因此我们不会阻塞滤波器。指定非零的transform_timeout会影响滤波器的时序，因为它会等待最大的transform_timeout时间以使转换可用。这直接意味着大多数指定的期望输出速率都无法满足，因为滤波器在更新时必须等待转换。
+transform_time_offset: 0.0
+
+# Use this parameter to provide specify how long the tf listener should wait for a transform to become available. 
+# Defaults to 0.0 if unspecified.
+transform_timeout: 0.0
+
+# 如果为true，则状态估计节点将向/diagnostics主题发布诊断消息。这对于调试配置和传感器数据很有用。
+print_diagnostics: true
+
+# Debug settings. Not for the faint of heart. Outputs a ludicrous amount of information to the file specified by
+# debug_out_file. I hope you like matrices! Please note that setting this to true will have strongly deleterious
+# effects on the performance of the node. Defaults to false if unspecified.
+debug: false
+
+# Defaults to "robot_localization_debug.txt" if unspecified. Please specify the full path.
+debug_out_file: /path/to/debug/file.txt
+
+# 如果为true，则状态估计节点将发布从world_frame参数指定的坐标系到base_link_frame参数指定的坐标系的转换。默认为true。
+publish_tf: true
+
+# 如果为true，则状态估计节点将发布线性加速状态。默认为false
+publish_acceleration: false
+
+# 这些参数定义了robot_localization的操作“模式”。REP-105指定三个主要坐标系：map，odom和base_link。base_link是固定在机器人上的坐标系。机器人在odom框架中的位置会随着时间而漂移，但在短期内是准确的，应该是连续的。map坐标系与odom坐标系一样，是固定的世界坐标系，虽然它包含您机器人的全局最准确的位置估计值，但由于GPS数据的融合，它会受到离散跳跃的影响。这是使用这些参数的方法：
+# 将map_frame，odom_frame和base_link_frame参数设置为系统的适当坐标系名称。
+# 注意：如果您的系统没有map_frame，则将其删除，并确保world_frame设置为odom_frame的值。
+# 注意：如果您正在运行多个EKF实例，并且想“覆盖”输出转换和消息以使其child_frame_id具有此坐标系，则可以进行设置。base_link_output_frame是可选的，默认为base_link_frame。当运行多个EKF实例时，这有助于启用断开连接的TF树。计算完最终状态后，我们将“覆盖”输出转换和消息，以使此坐标系为其child_frame_id。
+# 如果仅融合连续位置数据（例如车轮编码器里程计，视觉里程计或IMU数据），则将world_frame设置为odom_frame的值。这是robot_localization中状态估计节点的默认行为，也是最常见的用法。
+# .如果您要融合受离散跳跃影响的全局绝对位置数据（例如GPS或来自地标观测的位置更新），则：
+# 将world_frame设置为map_frame的值
+# 确保其他东西正在生成odom-> base_link的转换。这甚至可以是robot_localization状态估计节点的另一个实例。但是，该实例不应融合全局数据。
+map_frame: map              # Defaults to "map" if unspecified
+odom_frame: odom            # Defaults to "odom" if unspecified
+base_link_frame: base_link  # Defaults to "base_link" if unspecified
+world_frame: odom           # Defaults to the value of odom_frame if unspecified
+
+# The filter accepts an arbitrary number of inputs from each input message type (nav_msgs/Odometry,
+# geometry_msgs/PoseWithCovarianceStamped, geometry_msgs/TwistWithCovarianceStamped,
+# sensor_msgs/Imu). To add an input, simply append the next number in the sequence to its "base" name, e.g., odom0,
+# odom1, twist0, twist1, imu0, imu1, imu2, etc. The value should be the topic name. These parameters obviously have no
+# default values, and must be specified.
+odom0: /odom
+
+# Each sensor reading updates some or all of the filter's state. These options give you greater control over which
+# values from each measurement are fed to the filter. For example, if you have an odometry message as input, but only
+# want to use its Z position value, then set the entire vector to false, except for the third entry. The order of the
+# values is x, y, z, roll, pitch, yaw, vx, vy, vz, vroll, vpitch, vyaw, ax, ay, az. Note that not some message types
+# do not provide some of the state variables estimated by the filter. For example, a TwistWithCovarianceStamped message
+# has no pose information, so the first six values would be meaningless in that case. Each vector defaults to all false
+# if unspecified, effectively making this parameter required for each sensor.
+odom0_config: [true, true, false,
+               false, false, true,
+               true, true, false,
+               false, false, true,
+               false, false, false]
+
+# 用户可以使用这些参数来调整每个传感器的回调队列大小。如果您的频率参数值远低于传感器的频率，这很有用，因为它允许滤波器合并更新周期之间到达的所有测量值。
+odom0_queue_size: 3
+
+# [ADVANCED] Large messages in ROS can exhibit strange behavior when they arrive at a high frequency. This is a result
+# of Nagle's algorithm. This option tells the ROS subscriber to use the tcpNoDelay option, which disables Nagle's
+# algorithm.
+odom0_nodelay: false
+
+# 对于上面定义的每个包含位姿信息的传感器消息，用户可以指定是否应差分集成位姿变量。如果给定值设置为true，则对于从相关传感器在时间t进行的测量，
+# 我们首先将减去在时间t-1处的测量值，然后将所得值转换为速度。如果您的机器人有两个绝对位姿信息源，例如来自里程计和IMU的偏航测量，则此设置特别有用。
+# 在这种情况下，如果未正确配置输入源上的方差，则这些测量值可能会彼此不同步，并在滤波器中引起振荡，但是通过对其中一个或两个进行差分集成，我们可以避免这种情况。
+odom0_differential: true
+
+# 如果将此参数设置为true，则来自该传感器的任何测量值都将相对于从该传感器接收到的第一个测量值进行融合。
+# 这在以下情况下很有用，例如，如果您希望状态估计值始终从(0,0,0)开始，并且侧倾，俯仰和偏航角值为(0,0,0)。
+# 它与_differential参数相似，但是我们始终在时间0删除测量，而不是在时间t-1删除测量，并且不将测量转换为速度。
+odom0_relative: false
+
+# [ADVANCED]如果您的数据受到离群值的影响，使用这些阈值设置，表示为马氏距离，以控制距离当前车辆状态的传感器测量是允许的。
+# 如果未指定，则默认为numeric_limits&lt;double&gt;::max()。如果不需要，强烈建议删除这些参数。
+# 数据是在姿态和扭曲变量的级别上指定的，而不是为每个变量单独指定的。对于既有姿态数据又有扭曲数据的消息，该参数指定我们将阈值应用到消息的哪一部分。
+odom0_pose_rejection_threshold: 5
+odom0_twist_rejection_threshold: 1
+
+
+imu0: /imu
+imu0_config: [false, false, false,
+              true,  true,  true,
+              false, false, false,
+              true,  true,  true,
+              true,  true,  true]
+imu0_nodelay: false
+imu0_differential: false
+imu0_relative: true
+imu0_queue_size: 5
+imu0_pose_rejection_threshold: 0.8                 # Note the difference in parameter names
+imu0_twist_rejection_threshold: 0.8                #
+imu0_linear_acceleration_rejection_threshold: 0.8  #
+
+# 如果从IMU融合加速度计数据，则此参数确定在融合之前是否从重力测量中去除了由于重力引起的加速度。
+# 注意：这假定提供加速度数据的IMU也在产生绝对方向。需要方向数据才能正确消除重力加速度。
+imu0_remove_gravitational_acceleration: true   # false
+
+# [ADVANCED]  The EKF and UKF models follow a standard predict/correct cycle. During prediction, if there is no
+# acceleration reference, the velocity at time t+1 is simply predicted to be the same as the velocity at time t. During
+# correction, this predicted value is fused with the measured value to produce the new velocity estimate. This can be
+# problematic, as the final velocity will effectively be a weighted average of the old velocity and the new one. When
+# this velocity is the integrated into a new pose, the result can be sluggish covergence. This effect is especially
+# noticeable with LIDAR data during rotations. To get around it, users can try inflating the process_noise_covariance
+# for the velocity variable in question, or decrease the  variance of the variable in question in the measurement
+# itself. In addition, users can also take advantage of the control command being issued to the robot at the time we
+# make the prediction. If control is used, it will get converted into an acceleration term, which will be used during
+# predicition. Note that if an acceleration measurement for the variable in question is available from one of the
+
+
+# 如果为true，则状态估计节点将在话题cmd_vel中监听geometry_msgs/Twist消息，并使用该消息生成加速度。然后，该加速度将用于机器人的状态预测。在给定状态变量的收敛滞后即使很小的情况下，也会在您的应用程序中引起问题（例如，旋转期间LIDAR移位）的情况下，这尤其有用。默认为false。
+# 注意：来自IMU的线性加速度数据的存在和包含将“覆盖”当前预测的线性加速度值。
+use_control: false
+
+
+# 如果为true，并且use_control也为true，则查找geometry_msgs/TwistStamped消息，而不是geometry_msgs/Twist消息。
+stamped_control: false
+
+
+# 如果use_control设置为true，并且在此时间内没有收到任何控制命令（以秒为单位），则基于控制的加速项将不再适用。
+control_timeout: 0.2
+
+
+# 控制cmd_vel消息中的哪些变量用于状态预测。值的顺序为vx, vy, vz, vroll, vpitch, vyaw.
+control_config: [true, false, false, false, false, true]
+
+
+# 您的机器人在每个维度上的加速度。匹配control_config中的参数顺序。仅在use_control设置为true时使用。
+acceleration_limits: [1.3, 0.0, 0.0, 0.0, 0.0, 3.4]
+
+
+# 您的机器人在每个维度上的减速度。匹配control_config中的参数顺序。仅在use_control设置为true时使用。
+deceleration_limits: [1.3, 0.0, 0.0, 0.0, 0.0, 4.5]
+
+
+# 如果您的机器人无法立即达到其加速度极限，则可以通过这些增益来控制允许的变化。仅在use_control设置为true时使用。
+acceleration_gains: [0.8, 0.0, 0.0, 0.0, 0.0, 0.9]
+
+
+# 如果您的机器人无法立即达到其减速极限，则可以通过这些增益来控制允许的变化。仅在use_control设置为true时使用。
+deceleration_gains: [1.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+
+# [ADVANCED] The process noise covariance matrix can be difficult to tune, and can vary for each application, so it is
+# exposed as a configuration parameter. This matrix represents the noise we add to the total error after each
+# prediction step. The better the omnidirectional motion model matches your system, the smaller these values can be.
+# However, if users find that a given variable is slow to converge, one approach is to increase the
+# process_noise_covariance diagonal value for the variable in question, which will cause the filter's predicted error
+# to be larger, which will cause the filter to trust the incoming measurement more during correction. The values are
+# ordered as x, y, z, roll, pitch, yaw, vx, vy, vz, vroll, vpitch, vyaw, ax, ay, az. Defaults to the matrix below if
+# unspecified.
+# process_noise_covariance: [0.05, 0,    0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
+#                            0,    0.05, 0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
+#                            0,    0,    0.06, 0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
+#                            0,    0,    0,    0.03, 0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
+#                            0,    0,    0,    0,    0.03, 0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
+#                            0,    0,    0,    0,    0,    0.06, 0,     0,     0,    0,    0,    0,    0,    0,    0,
+#                            0,    0,    0,    0,    0,    0,    0.025, 0,     0,    0,    0,    0,    0,    0,    0,
+#                            0,    0,    0,    0,    0,    0,    0,     0.025, 0,    0,    0,    0,    0,    0,    0,
+#                            0,    0,    0,    0,    0,    0,    0,     0,     0.04, 0,    0,    0,    0,    0,    0,
+#                            0,    0,    0,    0,    0,    0,    0,     0,     0,    0.01, 0,    0,    0,    0,    0,
+#                            0,    0,    0,    0,    0,    0,    0,     0,     0,    0,    0.01, 0,    0,    0,    0,
+#                            0,    0,    0,    0,    0,    0,    0,     0,     0,    0,    0,    0.02, 0,    0,    0,
+#                            0,    0,    0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0.01, 0,    0,
+#                            0,    0,    0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0.01, 0,
+#                            0,    0,    0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0.015]
+process_noise_covariance: [0.05, 0,    0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
+                           0,    0.05, 0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
+                           0,    0,    0.06, 0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
+                           0,    0,    0,    0.03, 0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
+                           0,    0,    0,    0,    0.03, 0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0.35, 0,     0,     0,    0,    0,    0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0.25, 0,     0,    0,    0,    0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0,     0.25, 0,    0,    0,    0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0,     0,     0.24, 0,    0,    0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0,     0,     0,    0.36, 0,    0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0,     0,     0,    0,    0.36, 0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0,     0,     0,    0,    0,    0.36, 0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0.01, 0,    0,
+                           0,    0,    0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0.01, 0,
+                           0,    0,    0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0.25]
+
+# [ADVANCED] This represents the initial value for the state estimate error covariance matrix. Setting a diagonal
+# value (variance) to a large value will result in rapid convergence for initial measurements of the variable in
+# question. Users should take care not to use large values for variables that will not be measured directly. The values
+# are ordered as x, y, z, roll, pitch, yaw, vx, vy, vz, vroll, vpitch, vyaw, ax, ay, az. Defaults to the matrix below
+#if unspecified.
+initial_estimate_covariance: [1e-9, 0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    0,    0,
+                              0,    1e-9, 0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    0,    0,
+                              0,    0,    1e-9, 0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    0,    0,
+                              0,    0,    0,    1e-9, 0,    0,    0,    0,    0,    0,     0,     0,     0,    0,    0,
+                              0,    0,    0,    0,    1e-9, 0,    0,    0,    0,    0,     0,     0,     0,    0,    0,
+                              0,    0,    0,    0,    0,    1e-9, 0,    0,    0,    0,     0,     0,     0,    0,    0,
+                              0,    0,    0,    0,    0,    0,    1e-9, 0,    0,    0,     0,     0,     0,    0,    0,
+                              0,    0,    0,    0,    0,    0,    0,    1e-9, 0,    0,     0,     0,     0,    0,    0,
+                              0,    0,    0,    0,    0,    0,    0,    0,    1e-9, 0,     0,     0,     0,    0,    0,
+                              0,    0,    0,    0,    0,    0,    0,    0,    0,    1e-9,  0,     0,     0,    0,    0,
+                              0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     1e-9,  0,     0,    0,    0,
+                              0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     1e-9,  0,    0,    0,
+                              0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     1e-9, 0,    0,
+                              0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    1e-9, 0,
+                              0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    0,    1e-9]
+

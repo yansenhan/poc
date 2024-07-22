@@ -1,0 +1,6 @@
+Using cache found in /home/lijixiang/.cache/torch/hub/ultralytics_yolov5_master
+YOLOv5 🚀 2024-7-16 Python-3.8.0 torch-1.13.1+cu116 CUDA:0 (NVIDIA GeForce RTX 3090, 24238MiB)
+
+Fusing layers... 
+Model summary: 157 layers, 7012822 parameters, 0 gradients, 15.8 GFLOPs
+Adding AutoShape... 

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<script>
+// 获取Windows操作系统版本信息（利用UA检测，可能会存在误判）
+var isWindows = (navigator.platform.indexOf("Win") == 0); //注：历史出现过3种 Windows Win16 Win32
+var isWin2000, isWinXP, isWin2003, isWinVista, isWin7, isWin8, isWin8_1, isWin10;
+
+isWin2000 = isWinXP = isWin2003 = isWinVista = isWin7 = isWin8 = isWin8_1 = isWin10 = false;
+if (isWindows) {
+	var ua = navigator.userAgent;
+	if (/Win(?:dows )?([^do]{2})\s?(\d+\.\d+)?/.test(ua)) {
+		if(RegExp["$1"] == "NT"){
+			switch (RegExp["$2"]) {
+				case "5.0":
+				case "5.01": // Windows 2000 SP1
+					isWin2000 = true;
+					break;
+				case "5.1":
+					isWinXP = true;
+					break;
+				case "5.2":
+					isWin2003 = true;
+					break;
+				case "6.0":
+					isWinVista = true;
+					break;
+				case "6.1":
+					isWin7 = true;
+					break;
+				case "6.2":
+					isWin8 = true;
+					break;
+				case "6.3":
+					isWin8_1 = true;
+					break;
+				case "6.4": // Windows 10 技术预览版
+				case "10": // 网上的代码有这个，不知道是写错了，还是说某个预览版长这样
+				case "10.0":
+					isWin10 = true;
+					break;
+				default: // 古老的和新出的windows系统，统一用双签名的那个
+					break;
+			}
+		}
+	}
+}
+
+var isIE = ("ActiveXObject" in window);
+var signver = "sha256"; // 默认情况下使用sha256
+// 若是windows平台，浏览器是IE，且操作系统是VISTA以下，则使用sha1
+if (isWindows && isIE && (isWin2000 || isWinXP || isWin2003)) {
+	signver = "sha1";
+}
+
+var search = location.search; //?a=1&b=2
+if (search.length > 0) {
+	search += "&signver=" + signver;
+} else {
+	search = "?signver=" + signver;
+}
+
+location.href = "https.htm" + search;
+</script>
+
+<body>
+</body>
+</html>

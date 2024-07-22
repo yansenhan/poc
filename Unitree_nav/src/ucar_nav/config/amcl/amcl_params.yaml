@@ -1,0 +1,51 @@
+use_map_topic: true #
+# 当设置为true时，AMCL将会订阅map话题，而不是调用服务返回地图。也就是说，当设置为true时，有另外一个节点实时的发布map话题，也就是机器人在实时的进行地图构建，并供给amcl话题使用；当设置为false时，通过map server，也就是调用已经构建完成的地图。
+# 在navigation 1.4.2中新加入的参数。
+first_map_only: true   # 当设置为true时，AMCL将仅仅使用订阅的第一个地图，而不是每次接收到新的时更新为一个新的地图，在navigation 1.4.2中新加入的参数
+
+odom_frame_id: "odom"
+base_frame_id: "base_link"
+global_frame_id: "map"
+tf_broadcast: true
+
+## Publish scans from best pose at a max of 10 Hz
+odom_model_type: "omni"
+odom_alpha5: 0.1
+gui_publish_rate: 20
+laser_max_beams: 50
+laser_min_range: -1
+laser_max_range: 12.0
+min_particles: 100
+max_particles: 500
+kld_err: 0.05
+kld_z: 0.99
+odom_alpha1: 0.4
+odom_alpha2: 0.2
+
+## translation std dev, m 
+odom_alpha3: 0.8
+odom_alpha4: 0.2
+laser_z_hit: 0.5
+laser_z_short: 0.05
+laser_z_max: 0.05
+laser_z_rand: 0.5
+laser_sigma_hit: 0.2
+laser_lambda_short: 0.1
+laser_model_type: "likelihood_field" # "likelihood_field" or "beam"
+laser_likelihood_max_dist: 2.0
+update_min_d: 0.2
+update_min_a: 0.5
+
+resample_interval: 1
+
+## Increase tolerance because the computer can get quite busy 
+transform_tolerance: 1.0
+recovery_alpha_slow: 0   # 0.001
+recovery_alpha_fast: 0   # 0.1
+initial_pose_x: -0.10
+initial_pose_y: 0.08
+initial_pose_a: -0.028
+initial_cov_xx: 0.0625      # 初始姿态协方差（x * x），用于初始化具有高斯分布的滤波器。
+initial_cov_yy: 0.0625        # 初始姿态协方差（y * y），用于初始化具有高斯分布的滤波器。
+# initial_cov_aa: 0.5*0.5        # 初始姿态协方差（yaw * yaw），用于初始化具有高斯分布的滤波器。
+save_pose_rate: 0.5

@@ -1,0 +1,59 @@
+<launch>
+
+  <arg name="ctrl_level" default="highlevel"/>
+
+
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find ucar_nav)/maps/mapname.yaml" output="screen">
+   <param name="frame_id" value="map" />
+  </node >  -->
+
+
+  <!-- <node name="tf_transform" pkg="ucar_nav" type="transform" /> -->
+
+
+  <!-- Launch the laser scan-->
+  <include file="$(find slamware_ros_sdk)/launch/slamware_ros_sdk_server_and_view.launch" > </include>
+
+
+  <!-- Launch the higt state -->
+  <!-- <node pkg="unitree_legged_real" type="State_pub" name="node_State_pub" output="screen" args="$(arg ctrl_level)">
+    <param name="control_level" value="$(arg ctrl_level)"/>
+  </node> -->
+
+  <!-- trans higt state to oddom and IMU -->
+  <!-- <node pkg="ucar_nav" type="State2odom.py" name="State2odom"/> -->
+
+  <!-- Launch the ekf -->
+  <!-- <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
+    <rosparam command="load" file="$(find ucar_nav)/config/ekfse/ekf.yaml" />
+  </node> -->
+
+
+  <!-- <include file="$(find ucar_nav)/config/amcl/amcl_omni.launch" > </include> -->
+
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+
+    <remap from="/map" to="/slamware_ros_sdk_server_node/map" />
+    <remap from='/scan' to='/slamware_ros_sdk_server_node/scan' />
+    <remap from='/odom' to='/slamware_ros_sdk_server_node/odom' />
+
+    <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
+    <!-- <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/> -->
+    <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS"/>
+    <rosparam file="$(find ucar_nav)/config/TEB/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find ucar_nav)/config/TEB/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find ucar_nav)/config/TEB/teb_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find ucar_nav)/config/TEB/move_base_params.yaml" command="load" />
+    <rosparam file="$(find ucar_nav)/config/TEB/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find ucar_nav)/config/TEB/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find ucar_nav)/config/TEB/costmap_converter_params.yaml" command="load" />
+    <!-- <rosparam file="$(find ucar_nav)/config/TEB/my_navigation.yaml" command="load" /> -->
+  </node>
+  
+
+  <include file="$(find unitree_legged_real)/launch/real.launch" > </include>
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find slamware_ros_sdk)/rviz/slamware_ros_sdk_server_node.rviz" /> -->
+
+
+</launch>

@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="amcl" type="amcl" name="amcl">
+    <rosparam command="load" file="$(find ucar_nav)/config/amcl/amcl_params.yaml" />
+    <remap from='/scan' to='/slamware_ros_sdk_server_node/scan' />
+  </node>
+</launch>
