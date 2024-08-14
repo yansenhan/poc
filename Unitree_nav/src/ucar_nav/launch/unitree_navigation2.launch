@@ -8,7 +8,7 @@
   </node >  -->
 
 
-  <!-- <node name="tf_transform" pkg="ucar_nav" type="transform" /> -->
+  <node name="tf_transform" pkg="ucar_nav" type="transform" />
 
 
   <!-- Launch the laser scan-->

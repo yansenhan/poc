@@ -67,7 +67,7 @@ include slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_de
 include slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_deps_BasicSensorInfoArray.dir/progress.make
 
 slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_deps_BasicSensorInfoArray:
-	cd /home/lijixiang/Thu_unitree/Unitree_nav/build/slamware_ros_sdk && ../catkin_generated/env_cached.sh /home/lijixiang/miniconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py slamware_ros_sdk /home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfoArray.msg geometry_msgs/Pose:slamware_ros_sdk/ImpactType:slamware_ros_sdk/BasicSensorInfo:geometry_msgs/Quaternion:slamware_ros_sdk/SensorType:geometry_msgs/Point
+	cd /home/lijixiang/Thu_unitree/Unitree_nav/build/slamware_ros_sdk && ../catkin_generated/env_cached.sh /home/lijixiang/miniconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py slamware_ros_sdk /home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfoArray.msg geometry_msgs/Point:slamware_ros_sdk/SensorType:slamware_ros_sdk/ImpactType:slamware_ros_sdk/BasicSensorInfo:geometry_msgs/Pose:geometry_msgs/Quaternion
 
 _slamware_ros_sdk_generate_messages_check_deps_BasicSensorInfoArray: slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_deps_BasicSensorInfoArray
 _slamware_ros_sdk_generate_messages_check_deps_BasicSensorInfoArray: slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_deps_BasicSensorInfoArray.dir/build.make

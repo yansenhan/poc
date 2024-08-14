@@ -10,7 +10,7 @@ int main(int argc, char* argv[])
     ros::init(argc, argv, "pose_publisher");
     ros::NodeHandle n;
     ros::Publisher posemsgpub = n.advertise<std_msgs::Float32MultiArray>("/posemsg", 10); 
-    ros::Rate r(10.0);
+    ros::Rate r(20.0);
     tf::TransformListener listener;
     double yaw,pitch,roll; 
 

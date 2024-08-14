@@ -67,7 +67,7 @@ include slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_de
 include slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_deps_SyncSetStcm.dir/progress.make
 
 slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_deps_SyncSetStcm:
-	cd /home/lijixiang/Thu_unitree/Unitree_nav/build/slamware_ros_sdk && ../catkin_generated/env_cached.sh /home/lijixiang/miniconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py slamware_ros_sdk /home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/srv/SyncSetStcm.srv geometry_msgs/Pose:geometry_msgs/Point:geometry_msgs/Quaternion
+	cd /home/lijixiang/Thu_unitree/Unitree_nav/build/slamware_ros_sdk && ../catkin_generated/env_cached.sh /home/lijixiang/miniconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py slamware_ros_sdk /home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/srv/SyncSetStcm.srv geometry_msgs/Quaternion:geometry_msgs/Pose:geometry_msgs/Point
 
 _slamware_ros_sdk_generate_messages_check_deps_SyncSetStcm: slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_deps_SyncSetStcm
 _slamware_ros_sdk_generate_messages_check_deps_SyncSetStcm: slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_deps_SyncSetStcm.dir/build.make

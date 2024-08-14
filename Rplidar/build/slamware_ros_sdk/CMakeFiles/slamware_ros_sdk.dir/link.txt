@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/lijixiang/Thu_unitree/Rplidar/devel/lib/libslamware_ros_sdk.a CMakeFiles/slamware_ros_sdk.dir/src/client/slamware_ros_sdk_client.cpp.o
+/usr/bin/ranlib /home/lijixiang/Thu_unitree/Rplidar/devel/lib/libslamware_ros_sdk.a

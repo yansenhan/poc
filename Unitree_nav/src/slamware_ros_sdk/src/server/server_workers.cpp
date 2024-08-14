@@ -563,6 +563,7 @@ namespace slamware_ros_sdk {
             startScanTime = ros::Time(lidarStartTimestamp / 1000000.0);
             endScanTime = ros::Time(tLs.getEndTimestamp() / 1000000.0);
         }
+        ROS_INFO("[POC Log]: get data"); // Yansen add
         double dblScanDur = (endScanTime - startScanTime).toSec();
 
         const auto& points = tLs.getLaserPoints();
@@ -590,6 +591,7 @@ namespace slamware_ros_sdk {
         {
             isLaserDataReverse = true;
         }
+        ROS_INFO("[POC Log]: 1"); // Yansen add
 
         if (srvParams.angle_compensate)
         {
@@ -602,6 +604,7 @@ namespace slamware_ros_sdk {
         BOOST_ASSERT(2 <= msgScan.ranges.size());
         msgScan.scan_time = dblScanDur;
         msgScan.time_increment = dblScanDur / (double)(msgScan.ranges.size() - 1);
+        ROS_INFO("[POC Log]: 2"); // Yansen add
 
         {
             tf::Transform laserTrans;
@@ -610,7 +613,9 @@ namespace slamware_ros_sdk {
             laserTrans.setRotation(qLaserTrans);
             tfBrdcst.sendTransform(tf::StampedTransform(laserTrans, startScanTime, srvParams.map_frame, srvParams.laser_frame));
         }
+        ROS_INFO("[POC Log]: 3"); // Yansen add
         pubLaserScan_.publish(msgScan);
+        ROS_INFO("[POC Log]: 4"); // Yansen add
     }
 
     void ServerLaserScanWorker::fillRangeMinMaxInMsg_(const std::vector<rpos::core::LaserPoint>& laserPoints

@@ -14,7 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   geometry_msgs
   tf
-#  message_generation
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -56,12 +56,16 @@ find_package(catkin REQUIRED COMPONENTS
 #   Message1.msg
 #   Message2.msg
 # )
+add_message_files(
+  FILES
+  Boxinfo.msg
+)
 
 ## Generate services in the 'srv' folder
-add_service_files(
-  FILES
-  Boxinfo.srv
-)
+# add_service_files(
+#   FILES
+#   Boxinfo.srv
+# )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -108,7 +112,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES ucar_nav
-   CATKIN_DEPENDS nav_msgs roscpp rospy std_msgs 
+   CATKIN_DEPENDS nav_msgs roscpp rospy std_msgs message_runtime
 #  DEPENDS system_lib
 )
 

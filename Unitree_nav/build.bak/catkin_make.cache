@@ -1,0 +1,2 @@
+slamware_ros_sdk:slamware_sdk:ucar_nav:unitree_ros_to_real/unitree_legged_msgs:unitree_ros_to_real/unitree_legged_real
+-DCATKIN_DEVEL_PREFIX=/home/lijixiang/Thu_unitree/Unitree_nav/devel -DCMAKE_INSTALL_PREFIX=/home/lijixiang/Thu_unitree/Unitree_nav/install -G Unix Makefiles

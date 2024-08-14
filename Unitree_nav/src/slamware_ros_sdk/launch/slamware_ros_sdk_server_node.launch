@@ -1,5 +1,6 @@
 <launch>
-  <arg name="ip_address" default="192.168.31.220" />
+  <!-- <arg name="ip_address" default="192.168.31.220" /> -->
+  <arg name="ip_address" default="192.168.11.1" />
   <arg name="move_base_goal_topic" default="/move_base_simple/goal"/>
   <arg name="raw_ladar_data" default="false" />
 
@@ -16,15 +17,19 @@
   <param name = "map_frame"                value = "map"/>
   <param name = "robot_pose_frame"            value = "robot_pose"/>
 
-  <param name = "odometry_pub_period"      value = "0.05"/>  <!-- pub_accumulate_odometry = false pub robot pose data -->
-  <param name = "robot_pose_pub_period"      value = "0.05"/>
+  <!-- <param name = "odometry_pub_period"      value = "0.05"/>  
+  <param name = "robot_pose_pub_period"      value = "0.05"/>   -->
+  <param name = "odometry_pub_period"      value = "0.1"/>  
+  <param name = "robot_pose_pub_period"      value = "0.1"/>
   <param name = "scan_pub_period"            value = "0.1"/>
   <param name = "map_pub_period"             value = "0.2"/>
-  <param name = "path_pub_period"            value = "0.05"/>
+  <!-- <param name = "path_pub_period"            value = "0.05"/> -->
+  <param name = "path_pub_period"            value = "0.1"/>
   <param name = "imu_raw_data_period"        value = "0.05"/>
   <param name = "virtual_walls_pub_period"   value = "0.5"/>
   <param name = "virtual_tracks_pub_period"  value = "0.5"/>
-  <param name = "basic_sensors_values_pub_period"   value = "0.05"/>
+  <!-- <param name = "basic_sensors_values_pub_period"   value = "0.05"/> -->
+  <param name = "basic_sensors_values_pub_period"   value = "0.1"/>
 
   <param name = "vel_control_topic"          value = "cmd_vel"/>
   <param name = "raw_ladar_data"             value = "$(arg raw_ladar_data)"/> 
@@ -33,10 +38,8 @@
   <param name = "pub_accumulate_odometry"     value = "false"/>
   <param name = "robot_pose_topic"            value = "robot_pose"/>
 
-  <!-- publish topic remap /-->
   <remap from = "scan"                       to = "scan"/>
   <remap from = "odom"                       to = "odom"/>
-  <!-- <remap from = "map"                        to = "slamware_map"/> -->
   <remap from = "map"                        to = "map"/>
   <remap from = "map_metadata"               to = "map_metadata"/>
   <remap from = "global_plan_path"           to = "global_plan_path"/>

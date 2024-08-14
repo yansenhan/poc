@@ -1,4 +1,4 @@
-while : ; do date ; sleep 8 ; pkill -KILL socat ; sleep 6; grep transfer soclidar.log|| ( pkill -KILL socat ; sleep 8; grep transfer soclidar.log || pkill -KILL socat ) ;  pgrep -af socat ; done
+while : ; do date ; sleep 30 ; pkill -KILL socat ; sleep 6; grep transfer soclidar.log|| ( pkill -KILL socat ; sleep 8; grep transfer soclidar.log || pkill -KILL socat ) ;  pgrep -af socat ; done
 
 while : ; do date ; socat -d -d tcp-listen:1445,bind=0.0.0.0,reuseaddr,fork tcp:192.168.11.1:1445 2> soclidar.log; done
 

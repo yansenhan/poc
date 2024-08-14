@@ -89,7 +89,7 @@ add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32Array.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32Array.msg" "slamware_ros_sdk/Line2DFlt32:slamware_ros_sdk/Vec2DFlt32"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32Array.msg" "slamware_ros_sdk/Vec2DFlt32:slamware_ros_sdk/Line2DFlt32"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RectInt32.msg" NAME_WE)
@@ -129,12 +129,12 @@ add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg" "geometry_msgs/Pose:slamware_ros_sdk/ImpactType:geometry_msgs/Quaternion:slamware_ros_sdk/SensorType:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg" "geometry_msgs/Point:slamware_ros_sdk/SensorType:slamware_ros_sdk/ImpactType:geometry_msgs/Quaternion:geometry_msgs/Pose"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfoArray.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfoArray.msg" "geometry_msgs/Pose:slamware_ros_sdk/ImpactType:slamware_ros_sdk/BasicSensorInfo:geometry_msgs/Quaternion:slamware_ros_sdk/SensorType:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfoArray.msg" "geometry_msgs/Point:slamware_ros_sdk/SensorType:slamware_ros_sdk/ImpactType:slamware_ros_sdk/BasicSensorInfo:geometry_msgs/Pose:geometry_msgs/Quaternion"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg" NAME_WE)
@@ -144,12 +144,12 @@ add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg" "geometry_msgs/Pose:slamware_ros_sdk/ImpactType:slamware_ros_sdk/BasicSensorInfo:geometry_msgs/Quaternion:slamware_ros_sdk/SensorType:geometry_msgs/Point:slamware_ros_sdk/BasicSensorValue"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg" "slamware_ros_sdk/BasicSensorValue:geometry_msgs/Point:slamware_ros_sdk/SensorType:slamware_ros_sdk/ImpactType:slamware_ros_sdk/BasicSensorInfo:geometry_msgs/Pose:geometry_msgs/Quaternion"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueDataArray.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueDataArray.msg" "geometry_msgs/Pose:slamware_ros_sdk/ImpactType:slamware_ros_sdk/BasicSensorInfo:geometry_msgs/Quaternion:slamware_ros_sdk/BasicSensorValueData:slamware_ros_sdk/SensorType:geometry_msgs/Point:slamware_ros_sdk/BasicSensorValue"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueDataArray.msg" "slamware_ros_sdk/BasicSensorValue:geometry_msgs/Point:slamware_ros_sdk/SensorType:slamware_ros_sdk/BasicSensorValueData:slamware_ros_sdk/ImpactType:slamware_ros_sdk/BasicSensorInfo:geometry_msgs/Pose:geometry_msgs/Quaternion"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ActionDirection.msg" NAME_WE)
@@ -174,37 +174,37 @@ add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg" "slamware_ros_sdk/MoveOptionFlag:slamware_ros_sdk/OptionalFlt64"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg" "slamware_ros_sdk/OptionalFlt64:slamware_ros_sdk/MoveOptionFlag"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByDirectionRequest.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByDirectionRequest.msg" "slamware_ros_sdk/MoveOptionFlag:slamware_ros_sdk/OptionalFlt64:slamware_ros_sdk/MoveOptions:slamware_ros_sdk/ActionDirection"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByDirectionRequest.msg" "slamware_ros_sdk/OptionalFlt64:slamware_ros_sdk/MoveOptions:slamware_ros_sdk/MoveOptionFlag:slamware_ros_sdk/ActionDirection"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByThetaRequest.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByThetaRequest.msg" "slamware_ros_sdk/MoveOptionFlag:slamware_ros_sdk/MoveOptions:slamware_ros_sdk/OptionalFlt64"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByThetaRequest.msg" "slamware_ros_sdk/OptionalFlt64:slamware_ros_sdk/MoveOptions:slamware_ros_sdk/MoveOptionFlag"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToRequest.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToRequest.msg" "slamware_ros_sdk/MoveOptionFlag:geometry_msgs/Point:slamware_ros_sdk/MoveOptions:slamware_ros_sdk/OptionalFlt64"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToRequest.msg" "geometry_msgs/Point:slamware_ros_sdk/OptionalFlt64:slamware_ros_sdk/MoveOptions:slamware_ros_sdk/MoveOptionFlag"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToLocationsRequest.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToLocationsRequest.msg" "slamware_ros_sdk/MoveOptionFlag:geometry_msgs/Point:slamware_ros_sdk/MoveOptions:slamware_ros_sdk/OptionalFlt64"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToLocationsRequest.msg" "geometry_msgs/Point:slamware_ros_sdk/OptionalFlt64:slamware_ros_sdk/MoveOptions:slamware_ros_sdk/MoveOptionFlag"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateToRequest.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateToRequest.msg" "slamware_ros_sdk/MoveOptionFlag:geometry_msgs/Quaternion:slamware_ros_sdk/MoveOptions:slamware_ros_sdk/OptionalFlt64"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateToRequest.msg" "geometry_msgs/Quaternion:slamware_ros_sdk/OptionalFlt64:slamware_ros_sdk/MoveOptions:slamware_ros_sdk/MoveOptionFlag"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateRequest.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateRequest.msg" "slamware_ros_sdk/MoveOptionFlag:geometry_msgs/Quaternion:slamware_ros_sdk/MoveOptions:slamware_ros_sdk/OptionalFlt64"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateRequest.msg" "geometry_msgs/Quaternion:slamware_ros_sdk/OptionalFlt64:slamware_ros_sdk/MoveOptions:slamware_ros_sdk/MoveOptionFlag"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg" NAME_WE)
@@ -219,12 +219,12 @@ add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg" "slamware_ros_sdk/LocalizationMovement:slamware_ros_sdk/OptionalLocalizationMovement:slamware_ros_sdk/OptionalInt32"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg" "slamware_ros_sdk/LocalizationMovement:slamware_ros_sdk/OptionalInt32:slamware_ros_sdk/OptionalLocalizationMovement"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RecoverLocalizationRequest.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RecoverLocalizationRequest.msg" "slamware_ros_sdk/LocalizationOptions:slamware_ros_sdk/OptionalLocalizationMovement:slamware_ros_sdk/OptionalInt32:slamware_ros_sdk/RectFlt32:slamware_ros_sdk/LocalizationMovement"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RecoverLocalizationRequest.msg" "slamware_ros_sdk/RectFlt32:slamware_ros_sdk/OptionalInt32:slamware_ros_sdk/LocalizationOptions:slamware_ros_sdk/OptionalLocalizationMovement:slamware_ros_sdk/LocalizationMovement"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ClearMapRequest.msg" NAME_WE)
@@ -254,12 +254,12 @@ add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLineRequest.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLineRequest.msg" "slamware_ros_sdk/Line2DFlt32:slamware_ros_sdk/ArtifactUsage:slamware_ros_sdk/Vec2DFlt32"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLineRequest.msg" "slamware_ros_sdk/ArtifactUsage:slamware_ros_sdk/Vec2DFlt32:slamware_ros_sdk/Line2DFlt32"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLinesRequest.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLinesRequest.msg" "slamware_ros_sdk/Line2DFlt32:slamware_ros_sdk/ArtifactUsage:slamware_ros_sdk/Vec2DFlt32"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLinesRequest.msg" "slamware_ros_sdk/ArtifactUsage:slamware_ros_sdk/Vec2DFlt32:slamware_ros_sdk/Line2DFlt32"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RemoveLineRequest.msg" NAME_WE)
@@ -274,12 +274,12 @@ add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLineRequest.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLineRequest.msg" "slamware_ros_sdk/Line2DFlt32:slamware_ros_sdk/ArtifactUsage:slamware_ros_sdk/Vec2DFlt32"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLineRequest.msg" "slamware_ros_sdk/ArtifactUsage:slamware_ros_sdk/Vec2DFlt32:slamware_ros_sdk/Line2DFlt32"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLinesRequest.msg" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLinesRequest.msg" "slamware_ros_sdk/Line2DFlt32:slamware_ros_sdk/ArtifactUsage:slamware_ros_sdk/Vec2DFlt32"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLinesRequest.msg" "slamware_ros_sdk/ArtifactUsage:slamware_ros_sdk/Vec2DFlt32:slamware_ros_sdk/Line2DFlt32"
 )
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/srv/SyncGetStcm.srv" NAME_WE)
@@ -289,7 +289,7 @@ add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/srv/SyncSetStcm.srv" NAME_WE)
 add_custom_target(_slamware_ros_sdk_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/srv/SyncSetStcm.srv" "geometry_msgs/Pose:geometry_msgs/Point:geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slamware_ros_sdk" "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/srv/SyncSetStcm.srv" "geometry_msgs/Quaternion:geometry_msgs/Pose:geometry_msgs/Point"
 )
 
 #
@@ -385,7 +385,7 @@ _generate_msg_cpp(slamware_ros_sdk
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32Array.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
@@ -433,13 +433,13 @@ _generate_msg_cpp(slamware_ros_sdk
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfoArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
@@ -451,13 +451,13 @@ _generate_msg_cpp(slamware_ros_sdk
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueDataArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
@@ -487,43 +487,43 @@ _generate_msg_cpp(slamware_ros_sdk
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByDirectionRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ActionDirection.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ActionDirection.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByThetaRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToLocationsRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateToRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
@@ -541,13 +541,13 @@ _generate_msg_cpp(slamware_ros_sdk
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RecoverLocalizationRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RectFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RectFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
@@ -583,13 +583,13 @@ _generate_msg_cpp(slamware_ros_sdk
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLineRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLinesRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
@@ -607,13 +607,13 @@ _generate_msg_cpp(slamware_ros_sdk
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLineRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLinesRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 
@@ -627,7 +627,7 @@ _generate_srv_cpp(slamware_ros_sdk
 _generate_srv_cpp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/srv/SyncSetStcm.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slamware_ros_sdk
 )
 
@@ -850,7 +850,7 @@ _generate_msg_eus(slamware_ros_sdk
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32Array.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
@@ -898,13 +898,13 @@ _generate_msg_eus(slamware_ros_sdk
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfoArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
@@ -916,13 +916,13 @@ _generate_msg_eus(slamware_ros_sdk
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueDataArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
@@ -952,43 +952,43 @@ _generate_msg_eus(slamware_ros_sdk
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByDirectionRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ActionDirection.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ActionDirection.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByThetaRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToLocationsRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateToRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
@@ -1006,13 +1006,13 @@ _generate_msg_eus(slamware_ros_sdk
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RecoverLocalizationRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RectFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RectFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
@@ -1048,13 +1048,13 @@ _generate_msg_eus(slamware_ros_sdk
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLineRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLinesRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
@@ -1072,13 +1072,13 @@ _generate_msg_eus(slamware_ros_sdk
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLineRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLinesRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 
@@ -1092,7 +1092,7 @@ _generate_srv_eus(slamware_ros_sdk
 _generate_srv_eus(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/srv/SyncSetStcm.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slamware_ros_sdk
 )
 
@@ -1315,7 +1315,7 @@ _generate_msg_lisp(slamware_ros_sdk
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32Array.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
@@ -1363,13 +1363,13 @@ _generate_msg_lisp(slamware_ros_sdk
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfoArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
@@ -1381,13 +1381,13 @@ _generate_msg_lisp(slamware_ros_sdk
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueDataArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
@@ -1417,43 +1417,43 @@ _generate_msg_lisp(slamware_ros_sdk
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByDirectionRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ActionDirection.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ActionDirection.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByThetaRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToLocationsRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateToRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
@@ -1471,13 +1471,13 @@ _generate_msg_lisp(slamware_ros_sdk
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RecoverLocalizationRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RectFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RectFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
@@ -1513,13 +1513,13 @@ _generate_msg_lisp(slamware_ros_sdk
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLineRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLinesRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
@@ -1537,13 +1537,13 @@ _generate_msg_lisp(slamware_ros_sdk
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLineRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLinesRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 
@@ -1557,7 +1557,7 @@ _generate_srv_lisp(slamware_ros_sdk
 _generate_srv_lisp(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/srv/SyncSetStcm.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slamware_ros_sdk
 )
 
@@ -1780,7 +1780,7 @@ _generate_msg_nodejs(slamware_ros_sdk
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32Array.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
@@ -1828,13 +1828,13 @@ _generate_msg_nodejs(slamware_ros_sdk
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfoArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
@@ -1846,13 +1846,13 @@ _generate_msg_nodejs(slamware_ros_sdk
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueDataArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
@@ -1882,43 +1882,43 @@ _generate_msg_nodejs(slamware_ros_sdk
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByDirectionRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ActionDirection.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ActionDirection.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByThetaRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToLocationsRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateToRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
@@ -1936,13 +1936,13 @@ _generate_msg_nodejs(slamware_ros_sdk
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RecoverLocalizationRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RectFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RectFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
@@ -1978,13 +1978,13 @@ _generate_msg_nodejs(slamware_ros_sdk
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLineRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLinesRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
@@ -2002,13 +2002,13 @@ _generate_msg_nodejs(slamware_ros_sdk
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLineRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLinesRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 
@@ -2022,7 +2022,7 @@ _generate_srv_nodejs(slamware_ros_sdk
 _generate_srv_nodejs(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/srv/SyncSetStcm.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slamware_ros_sdk
 )
 
@@ -2245,7 +2245,7 @@ _generate_msg_py(slamware_ros_sdk
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32Array.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
@@ -2293,13 +2293,13 @@ _generate_msg_py(slamware_ros_sdk
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfoArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
@@ -2311,13 +2311,13 @@ _generate_msg_py(slamware_ros_sdk
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueDataArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValue.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/SensorType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorValueData.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ImpactType.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/BasicSensorInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
@@ -2347,43 +2347,43 @@ _generate_msg_py(slamware_ros_sdk
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByDirectionRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ActionDirection.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ActionDirection.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveByThetaRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveToLocationsRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateToRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RotateRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalFlt64.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveOptionFlag.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
@@ -2401,13 +2401,13 @@ _generate_msg_py(slamware_ros_sdk
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RecoverLocalizationRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RectFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/RectFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalInt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/OptionalLocalizationMovement.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationMovement.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
@@ -2443,13 +2443,13 @@ _generate_msg_py(slamware_ros_sdk
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLineRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/AddLinesRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
@@ -2467,13 +2467,13 @@ _generate_msg_py(slamware_ros_sdk
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLineRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 _generate_msg_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/MoveLinesRequest.msg"
   "${MSG_I_FLAGS}"
-  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg"
+  "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/ArtifactUsage.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Vec2DFlt32.msg;/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/Line2DFlt32.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 
@@ -2487,7 +2487,7 @@ _generate_srv_py(slamware_ros_sdk
 _generate_srv_py(slamware_ros_sdk
   "/home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/srv/SyncSetStcm.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slamware_ros_sdk
 )
 

@@ -67,7 +67,7 @@ include slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_de
 include slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_deps_LocalizationOptions.dir/progress.make
 
 slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_deps_LocalizationOptions:
-	cd /home/lijixiang/Thu_unitree/Unitree_nav/build/slamware_ros_sdk && ../catkin_generated/env_cached.sh /home/lijixiang/miniconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py slamware_ros_sdk /home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg slamware_ros_sdk/LocalizationMovement:slamware_ros_sdk/OptionalLocalizationMovement:slamware_ros_sdk/OptionalInt32
+	cd /home/lijixiang/Thu_unitree/Unitree_nav/build/slamware_ros_sdk && ../catkin_generated/env_cached.sh /home/lijixiang/miniconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py slamware_ros_sdk /home/lijixiang/Thu_unitree/Unitree_nav/src/slamware_ros_sdk/msg/LocalizationOptions.msg slamware_ros_sdk/LocalizationMovement:slamware_ros_sdk/OptionalInt32:slamware_ros_sdk/OptionalLocalizationMovement
 
 _slamware_ros_sdk_generate_messages_check_deps_LocalizationOptions: slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_deps_LocalizationOptions
 _slamware_ros_sdk_generate_messages_check_deps_LocalizationOptions: slamware_ros_sdk/CMakeFiles/_slamware_ros_sdk_generate_messages_check_deps_LocalizationOptions.dir/build.make

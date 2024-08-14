@@ -421,7 +421,7 @@ namespace slamware_ros_sdk {
             safeReleaseSlamwarePlatform_();
             if (shouldContinueRunning_())
             {
-                const std::uint32_t maxSleepMs = (1000u * 3u);
+                const std::uint32_t maxSleepMs = (100u * 1u);
                 ROS_INFO("wait %u ms to reconnect and restart work loop.", maxSleepMs);
                 roughSleepWait_(maxSleepMs, 100U);
             }
@@ -490,8 +490,8 @@ namespace slamware_ros_sdk {
             }
         }
 
-        const std::uint32_t maxSleepMs = (1000u * 2u);
-        const std::uint32_t maxLoopTryCnt = 3;
+        const std::uint32_t maxSleepMs = (100u * 1u);
+        const std::uint32_t maxLoopTryCnt = 2;
         for (std::uint32_t t = 1; (t <= maxLoopTryCnt && shouldContinueRunning_()); ++t)
         {
             std::uint32_t cntOk = 0;
@@ -601,23 +601,28 @@ namespace slamware_ros_sdk {
                 }
                 catch (const rpos::robot_platforms::OperationFailException& excp)
                 {
+                    //shouldReconnect = true; //+
                     ROS_WARN("worker name: %s, exception: %s.", wkName.c_str(), excp.what());
                 }
                 catch (const rpos::system::detail::ExceptionBase& excp)
                 {
+                    shouldReconnect = true; //+
                     ROS_ERROR("worker name: %s, exception: %s.", wkName.c_str(), excp.what());
                 }
                 catch (const std::exception& excp)
                 {
+                    shouldReconnect = true; //+
                     ROS_ERROR("worker name: %s, exception: %s.", wkName.c_str(), excp.what());
                 }
                 catch (...)
                 {
+                    shouldReconnect = true; //+
                     ROS_ERROR("worker name: %s, unknown exception.", wkName.c_str());
                 }
 
                 if (shouldReconnect)
                 {
+                    //shouldReconnect = true; //+
                     ROS_ERROR("it should reconnect to slamware.");
                     return;
                 }

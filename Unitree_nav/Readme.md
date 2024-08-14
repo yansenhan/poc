@@ -8,11 +8,11 @@
     roscore
 
 
-
+  
 ## 2. Unitree 端
 - 进入运动控制模式：(L2+A)*3 + (L1+B) + (L1+START)
-- 启动 雷达转发(终端保持开启)
-    socat -d -d tcp-listen:1445,bind=0.0.0.0,reuseaddr,fork tcp:192.168.11.1:1445
+<!-- - 启动 雷达转发(终端保持开启)
+    socat -d -d tcp-listen:1445,bind=0.0.0.0,reuseaddr,fork tcp:192.168.11.1:1445 -->
 
 - 启动 视频流捕获
     <!-- python ~/Thu_unitree/ucar_nav2/src/ucar_cam/usb_2_cam.py -->
@@ -21,12 +21,10 @@
 
 ## 3. PC端
 - 预热动作模块
-    roslaunch unitree_legged_real real.launch 
+    roslaunch unitree_legged_real real.launch   
 
 - 启动 雷达节点，Movebase，ros_udp
     roslaunch /home/lijixiang/Thu_unitree/Unitree_nav/src/ucar_nav/launch/unitree_navigation2.launch
-
-    rosrun ucar_nav transform 
 
 - 启动 high_cmd 转译
     conda activate noetic
@@ -38,9 +36,11 @@
 
 - 启动 决策主程序
     conda activate noetic
-    python ~/Thu_unitree/Unitree_nav/src/ucar_nav/script/example_zyp.py
+    python ~/Thu_unitree/Unitree_nav/src/ucar_nav/script/example_zyp_new2.py
+    python /home/lijixiang/Thu_unitree/Unitree_nav/src/ucar_nav/script/cammodel_test.py
 
-
+self.x_min_max_world:  (-12.150001037865877, 13.300000410526991)
+self.y_min_max_world:  (-16.250001098960638, 1.600000236183405)
 
 ## 调试工具
 

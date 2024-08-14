@@ -66,23 +66,23 @@ include ucar_nav/CMakeFiles/ucar_nav_generate_messages_py.dir/compiler_depend.ma
 # Include the progress variables for this target.
 include ucar_nav/CMakeFiles/ucar_nav_generate_messages_py.dir/progress.make
 
-ucar_nav/CMakeFiles/ucar_nav_generate_messages_py: /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/srv/_Boxinfo.py
-ucar_nav/CMakeFiles/ucar_nav_generate_messages_py: /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/srv/__init__.py
+ucar_nav/CMakeFiles/ucar_nav_generate_messages_py: /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/msg/_Boxinfo.py
+ucar_nav/CMakeFiles/ucar_nav_generate_messages_py: /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/msg/__init__.py
 
-/home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/srv/_Boxinfo.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/srv/_Boxinfo.py: /home/lijixiang/Thu_unitree/Unitree_nav/src/ucar_nav/srv/Boxinfo.srv
-/home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/srv/_Boxinfo.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lijixiang/Thu_unitree/Unitree_nav/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV ucar_nav/Boxinfo"
-	cd /home/lijixiang/Thu_unitree/Unitree_nav/build/ucar_nav && ../catkin_generated/env_cached.sh /home/lijixiang/miniconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/lijixiang/Thu_unitree/Unitree_nav/src/ucar_nav/srv/Boxinfo.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ucar_nav -o /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/srv
+/home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/msg/_Boxinfo.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/msg/_Boxinfo.py: /home/lijixiang/Thu_unitree/Unitree_nav/src/ucar_nav/msg/Boxinfo.msg
+/home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/msg/_Boxinfo.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lijixiang/Thu_unitree/Unitree_nav/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG ucar_nav/Boxinfo"
+	cd /home/lijixiang/Thu_unitree/Unitree_nav/build/ucar_nav && ../catkin_generated/env_cached.sh /home/lijixiang/miniconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/lijixiang/Thu_unitree/Unitree_nav/src/ucar_nav/msg/Boxinfo.msg -Iucar_nav:/home/lijixiang/Thu_unitree/Unitree_nav/src/ucar_nav/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ucar_nav -o /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/msg
 
-/home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/srv/__init__.py: /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/srv/_Boxinfo.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lijixiang/Thu_unitree/Unitree_nav/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python srv __init__.py for ucar_nav"
-	cd /home/lijixiang/Thu_unitree/Unitree_nav/build/ucar_nav && ../catkin_generated/env_cached.sh /home/lijixiang/miniconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/srv --initpy
+/home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/msg/__init__.py: /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/msg/_Boxinfo.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lijixiang/Thu_unitree/Unitree_nav/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for ucar_nav"
+	cd /home/lijixiang/Thu_unitree/Unitree_nav/build/ucar_nav && ../catkin_generated/env_cached.sh /home/lijixiang/miniconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/msg --initpy
 
 ucar_nav_generate_messages_py: ucar_nav/CMakeFiles/ucar_nav_generate_messages_py
-ucar_nav_generate_messages_py: /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/srv/_Boxinfo.py
-ucar_nav_generate_messages_py: /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/srv/__init__.py
+ucar_nav_generate_messages_py: /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/msg/_Boxinfo.py
+ucar_nav_generate_messages_py: /home/lijixiang/Thu_unitree/Unitree_nav/devel/lib/python3/dist-packages/ucar_nav/msg/__init__.py
 ucar_nav_generate_messages_py: ucar_nav/CMakeFiles/ucar_nav_generate_messages_py.dir/build.make
 .PHONY : ucar_nav_generate_messages_py
 

@@ -1,0 +1,6 @@
+ok
+[31m[1mrequirements:[0m Ultralytics requirement ['pillow>=10.3.0'] not found, attempting AutoUpdate...
+[31m[1mrequirements:[0m ❌ AutoUpdate skipped (offline)
+> /home/lijixiang/Thu_unitree/Unitree_nav/src/ucar_nav/script/ros_yolo.py(71)get_local_pixel_rgb_mean()
+-> for i in range(w // 4):
+(Pdb) 

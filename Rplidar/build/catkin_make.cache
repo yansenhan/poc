@@ -1,0 +1,2 @@
+slamware_ros_sdk:slamware_sdk
+-DCATKIN_DEVEL_PREFIX=/home/lijixiang/Thu_unitree/Rplidar/devel -DCMAKE_INSTALL_PREFIX=/home/lijixiang/Thu_unitree/Rplidar/install -G Unix Makefiles

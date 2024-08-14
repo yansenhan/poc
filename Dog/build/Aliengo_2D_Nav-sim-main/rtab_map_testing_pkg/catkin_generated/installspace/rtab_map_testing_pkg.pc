@@ -1,0 +1,8 @@
+prefix=/home/lijixiang/Thu_unitree/Dog/install
+
+Name: rtab_map_testing_pkg
+Description: Description of rtab_map_testing_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

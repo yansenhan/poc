@@ -1,0 +1,8 @@
+prefix=/home/lijixiang/Thu_unitree/Dog/devel
+
+Name: keyboard_control
+Description: Description of keyboard_control
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

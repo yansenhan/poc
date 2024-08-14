@@ -19,10 +19,10 @@ namespace slamware_ros_sdk {
 
     void ServerParams::resetToDefault()
     {
-        // ip_address = "192.168.11.1";
-        ip_address = "192.168.123.188";
+        ip_address = "192.168.11.1";
+        // ip_address = "192.168.31.110";
         robot_port = 1445;
-        reconn_wait_ms = (1000U * 3U);
+        reconn_wait_ms = (100U * 1U);
 
         angle_compensate = true;
         fixed_odom_map_tf = true;

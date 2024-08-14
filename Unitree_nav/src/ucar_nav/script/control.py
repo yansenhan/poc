@@ -30,16 +30,16 @@ class Control_transform:
         self.Laser_sub = rospy.Subscriber('/slamware_ros_sdk_server_node/scan', LaserScan, 
                                           self.callback_scan, queue_size=1)
         
-        self.my_timer = rospy.Timer(rospy.Duration(1), self.timer_callback)
+        # self.my_timer = rospy.Timer(rospy.Duration(0.2), self.timer_callback)
         
-        self.La_flag = 1
+        # self.La_flag = 1
     
 
     def callback_scan(self, data):
         self.La_flag = 1
 
     
-    def timer_callback(self):
+    def timer_callback(self, msg):
         self.La_flag -= 0.1
         
     def control_tf_callback(self, msg):
@@ -61,19 +61,21 @@ class Control_transform:
         highcmd.rpy = [0.0, 0.0, 0.0]
         
         # try:
-        #     lidar_scan = rospy.wait_for_message("/slamware_ros_sdk_server_node/scan", LaserScan, timeout=1)
+        #     lidar_scan = rospy.wait_for_message("/slamware_ros_sdk_server_node/scan", LaserScan, timeout=0.1)
         # except:
         #     lidar_scan = None
-        print("self.La_flag: ", self.La_flag)
-        if self.La_flag > 0.5:
-            highcmd.velocity = [msg.linear.x, msg.linear.y]
-            highcmd.yawSpeed = msg.angular.z
-            print("msg.linear.x, msg.linear.y: ", msg.linear.x, msg.linear.y)
-            print("msg.angular.z: ", msg.angular.z)
-        else:
-            highcmd.velocity = [0, 0]
-            highcmd.yawSpeed = 0
-            print("lidar time out, time: ", self.motion_time)
+        
+        # print("self.La_flag: ", self.La_flag)
+        # if self.La_flag > 0.5:
+        # if lidar_scan != None:
+        highcmd.velocity = [msg.linear.x, msg.linear.y]
+        highcmd.yawSpeed = msg.angular.z
+        print("msg.linear.x, msg.linear.y: ", msg.linear.x, msg.linear.y)
+        print("msg.angular.z: ", msg.angular.z)
+        # else:
+        #     highcmd.velocity = [0, 0]
+        #     highcmd.yawSpeed = 0
+        #     print("lidar time out, time: ", self.motion_time)
            
         highcmd.led = [LED() for _ in range(4)]
         highcmd.wirelessRemote = [0] * 40

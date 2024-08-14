@@ -8,11 +8,11 @@
   </node > 
 
 
-  <node name="tf_transform" pkg="ucar_nav" type="transform" />
+  <!-- <node name="tf_transform" pkg="ucar_nav" type="transform" /> -->
 
 
   <!-- Launch the laser scan-->
-  <!-- <include file="$(find slamware_ros_sdk)/launch/slamware_ros_sdk_server_node.launch" > </include> -->
+  <include file="$(find slamware_ros_sdk)/launch/slamware_ros_sdk_server_yrw.launch" > </include>
 
 
   <!-- Launch the higt state -->
@@ -21,7 +21,7 @@
   </node>
 
   <!-- trans higt state to oddom and IMU -->
-  <!-- <node pkg="ucar_nav" type="State2odom.py" name="State2odom"/> -->
+  <node pkg="ucar_nav" type="State2odom.py" name="State2odom"/>
 
   <!-- Launch the ekf -->
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
